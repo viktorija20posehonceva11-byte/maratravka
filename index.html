@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Māra Zālīte | Rakstniece</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f1eee5;
+    color: #343b32;
+}
+
+/* GALVENE */
+
+header {
+    min-height: 380px;
+    background: linear-gradient(120deg, #172c26, #49634e);
+    color: #f8f1df;
+    text-align: center;
+    padding: 75px 20px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+    margin: 25px 0 10px;
+}
+
+header p {
+    font-size: 19px;
+    color: #e5d7b7;
+    letter-spacing: 1px;
+}
+
+.line {
+    width: 90px;
+    height: 3px;
+    background: #c9a96e;
+    margin: 20px auto;
+}
+
+.flag {
+    width: 75px;
+    margin: auto;
+    border: 1px solid #e5d7b7;
+}
+
+.flag div:first-child,
+.flag div:last-child {
+    height: 19px;
+    background: #9e1b34;
+}
+
+.flag div:nth-child(2) {
+    height: 8px;
+    background: white;
+}
+
+/* MENU */
+
+nav {
+    background: #263b31;
+    padding: 18px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 10px #0002;
+}
+
+nav a {
+    color: #f5eddb;
+    text-decoration: none;
+    display: inline-block;
+    margin: 7px 12px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d5b77c;
+}
+
+/* GALVENAIS SATURS */
+
+main {
+    max-width: 1100px;
+    margin: 55px auto;
+    padding: 0 22px;
+}
+
+section {
+    background: #fffdf7;
+    padding: 38px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px #293b3010;
+    border-top: 3px solid #b79a62;
+}
+
+h2 {
+    color: #304b3b;
+    font-size: 29px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #d8c9a9;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: #637b57;
+    font-size: 21px;
+    margin-top: 30px;
+}
+
+/* TEKSTS */
+
+p {
+    font-size: 16px;
+    line-height: 1.95;
+    text-align: justify;
+    margin-bottom: 19px;
+    color: #55594f;
+}
+
+ul {
+    padding-left: 25px;
+    line-height: 2;
+    color: #55594f;
+}
+
+li {
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+li::marker {
+    color: #b79a62;
+}
+
+/* GALVENAIS ATTELS */
+
+.photo {
+    display: block;
+    width: 280px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 auto 15px;
+    border: 7px solid #f1eee5;
+    box-shadow: 0 5px 20px #0002;
+}
+
+.caption {
+    text-align: center;
+    font-size: 13px;
+    color: #898779;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* BIOGRAFIJAS KOLONNAS */
+
+.bio-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.bio-layout .photo {
+    width: 100%;
+    height: 360px;
+}
+
+/* DARBU KARTITES */
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.book-card {
+    background: #f3f0e6;
+    padding: 22px;
+    border-left: 4px solid #78906d;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px #0001;
+}
+
+.book-card h3 {
+    margin-top: 0;
+    color: #304b3b;
+}
+
+.book-card ul {
+    margin-bottom: 0;
+}
+
+/* FAKTI */
+
+.facts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.fact {
+    background: #e9eddf;
+    padding: 20px;
+    border-radius: 4px;
+    line-height: 1.7;
+    color: #465644;
+    border-bottom: 2px solid #b79a62;
+}
+
+/* APBALVOJUMI */
+
+.awards li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: #f3f0e6;
+    border-left: 3px solid #b79a62;
+    list-style: none;
+}
+
+/* AVOTI */
+
+.sources a {
+    color: #47664e;
+    text-decoration: none;
+    border-bottom: 1px solid #b79a62;
+    transition: 0.3s;
+}
+
+.sources a:hover {
+    color: #a17b39;
+}
+
+/* FOOTER */
+
+footer {
+    background: #20372c;
+    color: #f5eddb;
+    text-align: center;
+    padding: 35px 15px;
+    border-top: 4px solid #b79a62;
+}
+
+footer p {
+    color: #e1d8c5;
+    text-align: center;
+    margin: 7px;
+    font-size: 14px;
+}
+
+/* TELEFONIEM */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 55px 15px;
+    }
+
+    header h1 {
+        font-size: 37px;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav a {
+        margin: 8px;
+        font-size: 11px;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 23px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .bio-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-layout .photo {
+        max-width: 260px;
+    }
+
+    .books,
+    .facts {
+        grid-template-columns: 1fr;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="flag">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="line"></div>
+
+    <h1>Māra Zālīte</h1>
+
+    <p>Latviešu dzejniece, rakstniece un dramaturģe</p>
+
+    <div class="line"></div>
+
+</header>
+
+<nav>
+    <a href="#izvele">Mana izvēle</a>
+    <a href="#biografija">Biogrāfija</a>
+    <a href="#dailrade">Daiļrade</a>
+    <a href="#darbi">Darbi</a>
+    <a href="#romans">Romāns</a>
+    <a href="#fakti">Fakti</a>
+    <a href="#apbalvojumi">Apbalvojumi</a>
+    <a href="#avoti">Avoti</a>
+</nav>
+
+<main>
+
+<section id="izvele">
+
+    <h2>Mana izvēle</h2>
+
+    <p>
+    Es izvēlējos Māru Zālīti, jo viņa ir ievērojama
+    latviešu dzejniece un rakstniece. Man šķiet
+    interesanti, ka viņa raksta ne tikai dzejoļus,
+    bet arī lugas un grāmatas. Viņas darbos ir
+    stāstīts par Latviju, cilvēkiem un brīvību.
+    Es vēlos uzzināt vairāk par viņas dzīvi un
+    radošo darbu.
+    </p>
+
+</section>
+
+<section id="biografija">
+
+    <h2>Biogrāfija</h2>
+
+    <div class="bio-layout">
+
+        <div>
+            <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/MaraZalite.jpg"
+            alt="Māra Zālīte"
+            class="photo">
+
+            <p class="caption">
+            Māra Zālīte. Foto: Wikimedia Commons.
+            </p>
+        </div>
+
+        <div>
+
+            <p>
+            Māra Zālīte dzimusi 1952. gada 18. februārī
+            Krasnojarskā, Krievijā, izsūtīto ģimenē.
+            1956. gadā viņas ģimene atgriezās Latvijā.
+            Bērnību viņa pavadīja Slampes pagastā.
+            </p>
+
+            <p>
+            Māra Zālīte mācījās Murjāņu sporta internātskolā,
+            bet vēlāk studēja latviešu filoloģiju Latvijas
+            Valsts universitātē.
+            </p>
+
+            <p>
+            Viņa strādāja žurnālos "Liesma" un "Karogs".
+            No 1989. līdz 2000. gadam bija žurnāla
+            "Karogs" galvenā redaktore.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="dailrade">
+
+    <h2>Radošā darbība</h2>
+
+    <p>
+    Māra Zālīte ir daudzpusīga autore. Viņa raksta
+    dzeju, lugas, romānus, esejas un libretus.
+    Viņas darbos bieži sastopamas tēmas par Latviju,
+    brīvību, cilvēka dzīvi, ģimeni un vēsturi.
+    </p>
+
+    <p>
+    Viņas pirmā nozīmīgā publikācija bija dzejolis
+    "Balādīte", kas publicēts 1972. gadā žurnālā
+    "Karogs".
+    </p>
+
+    <p>
+    1980. gados viņa pievērsās arī dramaturģijai.
+    Viņas darbi ir izmantoti teātra izrādēs,
+    mūziklos un rokoperās.
+    </p>
+
+</section>
+
+<section id="darbi">
+
+    <h2>Grāmatas un nozīmīgākie darbi</h2>
+
+    <div class="books">
+
+        <div class="book-card">
+            <h3>Dzejoļu krājumi</h3>
+            <ul>
+                <li>Vakar zaļajā zālē (1977)</li>
+                <li>Rīt varbūt (1979)</li>
+                <li>Nav vārdam vietas (1985)</li>
+                <li>Debesis, debesis (1988)</li>
+                <li>Apkārtne (1997)</li>
+                <li>Dzeja (2003)</li>
+                <li>Vējš meklē mājas (2004)</li>
+            </ul>
+        </div>
+
+        <div class="book-card">
+            <h3>Romāni</h3>
+            <ul>
+                <li>Pieci pirksti (2013)</li>
+                <li>Paradīzes putni (2018)</li>
+            </ul>
+        </div>
+
+        <div class="book-card">
+            <h3>Lugas</h3>
+            <ul>
+                <li>Pilna Māras istabiņa (1981)</li>
+                <li>Tiesa (1985)</li>
+                <li>Dzīvais ūdens (1988)</li>
+                <li>Eža kažociņš (1991)</li>
+                <li>Margarēta (2000)</li>
+                <li>Tobāgo! (2001)</li>
+            </ul>
+        </div>
+
+        <div class="book-card">
+            <h3>Libreti un muzikālie darbi</h3>
+            <ul>
+                <li>Lāčplēsis (rokopera, 1988)</li>
+                <li>Momo (mūzikls, 1992)</li>
+                <li>Kaupēn, mans mīļais! (mūzikls, 1998)</li>
+                <li>Meža gulbji (mūzikls, 1993)</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="romans">
+
+    <h2>Romāns "Pieci pirksti"</h2>
+
+    <p>
+    "Pieci pirksti" ir Māras Zālītes autobiogrāfisks
+    romāns, kas izdots 2013. gadā. Tajā stāstīts
+    par meiteni Lauru un viņas ģimenes atgriešanos
+    Latvijā pēc dzīves Sibīrijā. Grāmatā attēlota
+    bērna pasaule, ģimene un tā laika notikumi.
+    </p>
+
+    <p>
+    2018. gadā tika izdots romāna turpinājums
+    "Paradīzes putni".
+    </p>
+
+</section>
+
+<section id="fakti">
+
+    <h2>Interesanti fakti</h2>
+
+    <div class="facts">
+
+        <div class="fact">
+        Māra Zālīte ir dzejniece, dramaturģe un prozaiķe.
+        </div>
+
+        <div class="fact">
+        Viņas pirmā nozīmīgā publikācija bija dzejolis "Balādīte".
+        </div>
+
+        <div class="fact">
+        Viņa ir rakstījusi libretus rokoperām un mūzikliem.
+        </div>
+
+        <div class="fact">
+        Viņas romāns "Pieci pirksti" ir autobiogrāfisks.
+        </div>
+
+        <div class="fact">
+        Viņas darbi ir tulkoti citās valodās.
+        </div>
+
+    </div>
+
+</section>
+
+<section id="apbalvojumi">
+
+    <h2>Apbalvojumi</h2>
+
+    <p>
+    Māra Zālīte ir saņēmusi vairākus nozīmīgus
+    apbalvojumus par savu darbu literatūrā un
+    kultūrā.
+    </p>
+
+    <ul class="awards">
+        <li>Triju Zvaigžņu ordenis (1995)</li>
+        <li>Atzinības krusts (2008)</li>
+        <li>Latvijas Literatūras gada balva par romānu "Pieci pirksti" (2013)</li>
+    </ul>
+
+</section>
+
+<section id="avoti" class="sources">
+
+    <h2>Informācijas avoti</h2>
+
+    <p>
+    Informācija iegūta no literatūras un kultūras
+    interneta resursiem:
+    </p>
+
+    <ul>
+        <li>
+            <a href="https://www.literatura.lv/personas/mara-zalite"
+            target="_blank">Literatura.lv – Māra Zālīte</a>
+        </li>
+
+        <li>
+            <a href="https://rakstnieciba.lv/rakstnieki/mara-zalite/"
+            target="_blank">Latvijas Rakstnieku savienība</a>
+        </li>
+
+        <li>
+            <a href="https://www.lsm.lv/raksts/kultura/literatura/mara-zalite-svin-65.dzimsanas-dienu.a224380/"
+            target="_blank">Latvijas Sabiedriskais medijs</a>
+        </li>
+
+        <li>
+            <a href="https://www.letonika.lv/"
+            target="_blank">Letonika.lv</a>
+        </li>
+
+        <li>
+            <a href="https://commons.wikimedia.org/wiki/Special:FilePath/MaraZalite.jpg"
+            target="_blank">Wikimedia Commons – fotogrāfija</a>
+        </li>
+    </ul>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>Mājaslapu veidoja: [Tavs vārds]</p>
+    <p>Literatūras projekts – Māra Zālīte</p>
+    <p>2026</p>
+
+</footer>
+
+</body>
+</html>
